@@ -2,15 +2,20 @@ import React from "react";
 
 function Input(props) {
     const inputRef = React.createRef();
-    const { type = "text", size = "medium", ...rest } = props;
+    const {
+        type = "text",
+        size = "medium",
+        placeholder = "Enter text here",
+        ...rest
+    } = props;
     return (
         <label>
-            Sample input:
             <input
                 className={`input ${size}`}
                 type={type}
                 size={size}
                 ref={inputRef}
+                placeholder={placeholder}
             />
         </label>
     );
