@@ -22,3 +22,8 @@ export const Checkbox = () => (
 export const Radio = () => (
     <Input placeholder="Mark radio button" type="radio" size="medium"></Input>
 );
+
+// Rename stories on V6
+Small.storyName = "Small Input";
+Medium.storyName = "Medium Input";
+Large.storyName = "Large Input";
