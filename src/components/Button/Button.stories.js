@@ -1,5 +1,6 @@
 import React from "react";
 import Button from "./Button";
+import { action, actions } from "@storybook/addon-actions";
 export default {
     title: "Form/Button",
     component: Button,
@@ -14,11 +15,13 @@ export const Danger = Template.bind({});
 Primary.args = {
     variant: "primary",
     children: "Primary",
+    onClick: action("Click handler"),
 };
 
 Secondary.args = {
     variant: "secondary",
     children: "Secondary",
+    ...actions("onClick", "onMouseOver"),
 };
 
 Success.args = {
