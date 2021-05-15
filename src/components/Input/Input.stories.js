@@ -4,6 +4,16 @@ import "./Input.css";
 export default {
     title: "Form/Input",
     component: Input,
+    argTypes: {
+        type: {
+            type: "radio",
+            options: ["text", "radio", "checkbox"],
+        },
+        size: {
+            type: "radio",
+            options: ["small", "medium", "large"],
+        },
+    },
 };
 
 const Template = (args) => <Input {...args}></Input>;

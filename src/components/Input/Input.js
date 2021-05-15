@@ -6,7 +6,6 @@ function Input(props) {
         type = "text",
         size = "medium",
         placeholder = "Enter text here",
-        ...rest
     } = props;
     return (
         <label>

@@ -4,6 +4,16 @@ import { action, actions } from "@storybook/addon-actions";
 export default {
     title: "Form/Button",
     component: Button,
+    argTypes: {
+        variant: {
+            type: "radio",
+            options: ["primary", "secondary", "success", "danger"],
+        },
+        children: {
+            type: "radio",
+            options: ["Primary", "Secondary", "Success", "Danger"],
+        },
+    },
 };
 
 const Template = (args) => <Button {...args} />;
