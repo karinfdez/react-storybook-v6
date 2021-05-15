@@ -1,10 +1,8 @@
 import React from "react";
 import Button from "./Button";
-import Center from "../Center/Center";
 export default {
     title: "Form/Button",
     component: Button,
-    decorators: [(story) => <Center>{story()}</Center>],
 };
 
 const Template = (args) => <Button {...args} />;

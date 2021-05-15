@@ -5,7 +5,6 @@ import Center from "../Center/Center";
 
 export default {
     title: "Form Subscription",
-    decorators: [(story) => <Center>{story()}</Center>],
 };
 
 const Template = (args) => (

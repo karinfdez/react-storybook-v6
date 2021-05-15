@@ -1,11 +1,9 @@
 import React from "react";
 import Input from "./Input";
-import Center from "../Center/Center";
 import "./Input.css";
 export default {
     title: "Form/Input",
     component: Input,
-    decorators: [(story) => <Center>{story()}</Center>],
 };
 
 const Template = (args) => <Input {...args}></Input>;
