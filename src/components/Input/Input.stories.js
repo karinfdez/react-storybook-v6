@@ -5,13 +5,10 @@ import "./Input.css";
 export default {
     title: "Form/Input",
     component: Input,
+    decorators: [(story) => <Center>{story()}</Center>],
 };
 
-const Template = (args) => (
-    <Center>
-        <Input {...args}></Input>
-    </Center>
-);
+const Template = (args) => <Input {...args}></Input>;
 
 export const Small = Template.bind({});
 export const Medium = Template.bind({});

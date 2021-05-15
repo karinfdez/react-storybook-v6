@@ -4,13 +4,10 @@ import Center from "../Center/Center";
 export default {
     title: "Form/Button",
     component: Button,
+    decorators: [(story) => <Center>{story()}</Center>],
 };
 
-const Template = (args) => (
-    <Center>
-        <Button {...args} />
-    </Center>
-);
+const Template = (args) => <Button {...args} />;
 export const Primary = Template.bind({});
 export const Secondary = Template.bind({});
 export const Success = Template.bind({});
