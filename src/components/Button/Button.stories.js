@@ -6,11 +6,11 @@ export default {
     component: Button,
     argTypes: {
         variant: {
-            type: "radio",
+            type: "select",
             options: ["primary", "secondary", "success", "danger"],
         },
         children: {
-            type: "radio",
+            type: "select",
             options: ["Primary", "Secondary", "Success", "Danger"],
         },
     },

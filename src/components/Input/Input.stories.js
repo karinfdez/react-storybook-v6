@@ -6,11 +6,11 @@ export default {
     component: Input,
     argTypes: {
         type: {
-            type: "radio",
+            type: "select",
             options: ["text", "radio", "checkbox"],
         },
         size: {
-            type: "radio",
+            type: "select",
             options: ["small", "medium", "large"],
         },
     },
