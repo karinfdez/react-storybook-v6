@@ -27,6 +27,7 @@ Secondary.args = {
 Success.args = {
     variant: "success",
     children: "Success",
+    onClick: () => console.log("Button Clicked"),
 };
 
 Danger.args = {
