@@ -1,27 +1,53 @@
 import React from "react";
 import Input from "./Input";
+import Center from "../Center/Center";
 import "./Input.css";
 export default {
     title: "Form/Input",
     component: Input,
 };
 
-export const Small = () => (
-    <Input placeholder="Enter small text" type="text" size="small"></Input>
-);
-export const Medium = () => (
-    <Input placeholder="Enter medium text" type="text" size="medium"></Input>
-);
-export const Large = () => (
-    <Input placeholder="Enter large text" type="text" size="large"></Input>
+const Template = (args) => (
+    <Center>
+        <Input {...args}></Input>
+    </Center>
 );
 
-export const Checkbox = () => (
-    <Input placeholder="Mark checkbox" type="checkbox" size="small"></Input>
-);
-export const Radio = () => (
-    <Input placeholder="Mark radio button" type="radio" size="medium"></Input>
-);
+export const Small = Template.bind({});
+export const Medium = Template.bind({});
+export const Large = Template.bind({});
+export const Checkbox = Template.bind({});
+export const Radio = Template.bind({});
+
+Small.args = {
+    placeholder: "Enter small text",
+    type: "text",
+    size: "small",
+};
+
+Medium.args = {
+    placeholder: "Enter medium text",
+    type: "text",
+    size: "medium",
+};
+
+Large.args = {
+    placeholder: "Enter large text",
+    type: "text",
+    size: "large",
+};
+
+Checkbox.args = {
+    placeholder: "Mark checkbox",
+    type: "checkbox",
+    size: "small",
+};
+
+Radio.args = {
+    placeholder: "Mark radio button",
+    type: "radio",
+    size: "medium",
+};
 
 // Rename stories on V6
 Small.storyName = "Small Input";

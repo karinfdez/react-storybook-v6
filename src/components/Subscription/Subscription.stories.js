@@ -6,9 +6,10 @@ export default {
     title: "Form Subscription",
 };
 
-export const PrimarySubscription = () => (
+const Template = (args) => (
     <>
         <Large />
         <Primary />
     </>
 );
+export const PrimarySubscription = Template.bind({});

@@ -1,12 +1,16 @@
 import React from "react";
 import Button from "./Button";
-
+import Center from "../Center/Center";
 export default {
     title: "Form/Button",
     component: Button,
 };
 
-const Template = (args) => <Button {...args} />;
+const Template = (args) => (
+    <Center>
+        <Button {...args} />
+    </Center>
+);
 export const Primary = Template.bind({});
 export const Secondary = Template.bind({});
 export const Success = Template.bind({});
