@@ -1,8 +1,10 @@
 import React from "react";
-import { addDecorator } from "@storybook/react";
-import Center from "../src/components/Center/Center";
+import { ChakraProvider, CSSReset, Box } from "@chakra-ui/react";
 
-addDecorator((story) => <Center>{story()}</Center>);
+// A way to add global decorator with V5
+// import { addDecorator } from "@storybook/react";
+// import Center from "../src/components/Center/Center";
+// addDecorator((story) => <Center>{story()}</Center>);
 
 export const parameters = {
     actions: { argTypesRegex: "^on[A-Z].*" },
@@ -22,3 +24,15 @@ export const parameters = {
                 : a[1].id.localeCompare(b[1].id, undefined, { numeric: true }),
     },
 };
+
+// Decorators V6(All stories will have margin 4 from the left)
+export const decorators = [
+    (Story) => (
+        <ChakraProvider>
+            <CSSReset />
+            <Box m="4">
+                <Story />
+            </Box>
+        </ChakraProvider>
+    ),
+];
