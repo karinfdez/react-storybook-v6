@@ -1,36 +1,11 @@
 import React from "react";
 import Button from "./Button";
 import { action, actions } from "@storybook/addon-actions";
-import { withKnobs, text, boolean } from "@storybook/addon-knobs";
-import { withA11y } from "@storybook/addon-a11y";
-
-// export default {
-//     title: "Storybook Knobs",
-//     decorators: [withKnobs],
-// };
-// Add the `withKnobs` decorator to add knobs support to your stories.
-// You can also configure `withKnobs` as a global decorator.
-
-// Knobs for React props
-// export const withAButton = () => (
-//     <button disabled={boolean("Disabled", false)}>
-//         {text("Label", "Hello Storybook")}
-//     </button>
-// );
-
-// // Knobs as dynamic variables.
-// export const asDynamicVariables = () => {
-//     const name = text("Name", "James");
-//     const age = number("Age", 35);
-//     const content = `I am ${name} and I'm ${age} years old.`;
-
-//     return <div>{content}</div>;
-// };
+import { text, boolean } from "@storybook/addon-knobs";
 
 export default {
     title: "Form/Button",
     component: Button,
-    decorators: [withKnobs, withA11y],
     argTypes: {
         variant: {
             type: "select",
@@ -48,7 +23,8 @@ const TemplateKnowbs = () => (
     <Button disabled={boolean("Disabled", false)}>
         {text("Label", "Button Label")}
     </Button>
-); //text is a function that taakes 2 parameters: 1: name of the prop, 2: initial value for the prop
+); //text is a function that takes 2 parameters: 1: name of the prop, 2: initial value for the prop
+
 export const Primary = Template.bind({});
 export const Secondary = Template.bind({});
 export const Success = Template.bind({});
