@@ -1,6 +1,8 @@
 import React from "react";
 import { ChakraProvider, CSSReset, Box } from "@chakra-ui/react";
 import "@storybook/addon-console";
+import { withKnobs } from "@storybook/addon-knobs";
+
 // A way to add global decorator with V5
 // import { addDecorator } from "@storybook/react";
 // import Center from "../src/components/Center/Center";
