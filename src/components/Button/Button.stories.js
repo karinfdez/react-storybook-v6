@@ -47,7 +47,11 @@ Secondary.args = {
 Success.args = {
     variant: "success",
     children: "Success",
-    onClick: () => console.log("Button Clicked"),
+    onClick: () =>
+        console.log(
+            "Button Clicked with env variable data",
+            process.env.STORYBOOK_DATA_KEY
+        ),
 };
 
 Danger.args = {
