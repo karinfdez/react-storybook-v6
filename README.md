@@ -1,8 +1,10 @@
 # Getting Started with Create React App
 
-Please note that this project is supported for storybook V6(6.2.9)
+This project is compatible with storybook V6 (6.2.9). Further version may brak some funcionalities.
 
 ## Available Scripts
+
+### `npm i`
 
 In the project directory, you can run:
 
