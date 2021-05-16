@@ -2,6 +2,7 @@ import React from "react";
 import Button from "./Button";
 import { action, actions } from "@storybook/addon-actions";
 import { withKnobs, text, boolean } from "@storybook/addon-knobs";
+import { withA11y } from "@storybook/addon-a11y";
 
 // export default {
 //     title: "Storybook Knobs",
@@ -29,7 +30,7 @@ import { withKnobs, text, boolean } from "@storybook/addon-knobs";
 export default {
     title: "Form/Button",
     component: Button,
-    decorators: [withKnobs],
+    decorators: [withKnobs, withA11y],
     argTypes: {
         variant: {
             type: "select",
@@ -52,6 +53,7 @@ export const Primary = Template.bind({});
 export const Secondary = Template.bind({});
 export const Success = Template.bind({});
 export const Danger = Template.bind({});
+export const Accessible = Template.bind({});
 export const WithKnobs = TemplateKnowbs.bind({});
 
 Primary.args = {
@@ -75,4 +77,9 @@ Success.args = {
 Danger.args = {
     variant: "danger",
     children: "Danger",
+};
+
+Accessible.args = {
+    variant: "purple",
+    children: "Accessible",
 };
